@@ -12,27 +12,27 @@
 % yarn dev
 ```
 
-Когда TSLint'у на ровном месте начинает казаться, что он окружён врагами, лечится так: в Visual Studio Code (это, кстати, единственная нормальная вещь среди всех упомянутых выше пакетов) жмём `Command+Shift+P` и вводим `TypeScript: Restart TS Server`.
+HINT: Когда TSLint'у на ровном месте начинает казаться, что он окружён врагами, лечится так: в Visual Studio Code (это, кстати, единственная нормальная вещь среди всех упомянутых выше пакетов) жмём `Command+Shift+P` и вводим `TypeScript: Restart TS Server`.
 
 
 ### Команды yarn
 
 ```bash
-# run application in development mode
-yarn dev
+# запуск в девелоперском режиме
+% yarn dev
 
-# compile source code and create webpack output
-yarn compile
+# компилируем сырцы webpack'ом
+% yarn compile
 
-# `yarn compile` & create build with electron-builder
-yarn dist
+# собираем релизную сборку (для Маков - под Маком, для Линухов - под Линухом, для Виндищ - из-под Виндищи)
+% yarn dist
 
-# `yarn compile` & create unpacked build with electron-builder
-yarn dist:dir
+# компилирует и создаёт неупакованную сборку electron-builder'ом
+% yarn dist:dir
 
-# remove the dist/ folder
-yarn cleanup
+# удаляет папку dist/
+% yarn cleanup
 
-# build a new dist and run all the tests after that
-yarn test
+# собираем новый дистрибутив, после чего прогоняяем по нему все тесты
+% yarn test
 ```
