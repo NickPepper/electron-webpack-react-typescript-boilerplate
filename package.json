@@ -1,0 +1,67 @@
+{
+  "name": "electron-webpack-react-typescript-boilerplate",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "update": "rm -rf dist/ && rm -rf node_modules/ && rm -f yarn.lock && yarn cleanup && yarn",
+    "dev": "yarn copystatic && electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn cleanup && yarn copystatic && yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
+    "test": "yarn dist && mocha",
+    "copystatic": "mkdir -p dist && rsync -av --progress ./static/ dist/static",
+    "cleanup": "rm -rf dist/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn check-for-leaks",
+      "pre-push": "yarn check-for-leaks"
+    }
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "source-map-support": "^0.5.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@types/node": "^12.12.24",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "assert": "^2.0.0",
+    "check-for-leaks": "^1.2.1",
+    "electron": "7.1.9",
+    "electron-builder": "^22.2.0",
+    "electron-mocha": "^8.2.0",
+    "electron-webpack": "^2.7.4",
+    "electron-webpack-eslint": "^5.0.1",
+    "electron-webpack-ts": "^3.2.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-watch": "^6.0.1",
+    "mocha": "^7.0.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "source-map-loader": "^0.2.4",
+    "spectron": "^9.0.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack": "~4.41.5"
+  },
+  "electronWebpack": {
+    "title": "MapANI v2",
+    "commonSourceDirectory": "src/common",
+    "staticSourceDirectory": "src/static",
+    "main": {
+      "sourceDirectory": "src/main"
+    },
+    "renderer": {
+      "sourceDirectory": "src/renderer"
+    }
+  },
+  "devEngines": {
+    "yarn": ">=1.13.0"
+  }
+}

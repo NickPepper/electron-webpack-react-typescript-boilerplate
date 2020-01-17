@@ -1,0 +1,16 @@
+# usual trash
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+TODO.txt
+*.bak
+.idea/
+
+# binaries etc
+/dist
+/temp
+/data
+
+# additional trash
+yarn.lock
