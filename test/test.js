@@ -1,19 +1,10 @@
 /* eslint-disable no-undef */
 
-// A simple test to verify a visible window is opened with a title
 const Application = require('spectron').Application
 const assert      = require('assert')
 
 
-describe('Array', () => {
-  describe('#indexOf()', () => {
-    it('should return -1 when the value is not present', () => {
-      assert.equal([1, 2, 3].indexOf(4), -1)
-    })
-  })
-})
-
-
+// A simple test to verify a visible window is opened with a title
 describe('Application launch', function () {
   this.timeout(10000)
 
