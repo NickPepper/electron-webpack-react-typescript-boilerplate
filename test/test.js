@@ -10,7 +10,7 @@ describe('Application launch', function () {
 
   this.beforeAll(() => {
     this.app = new Application({
-      path: `${__dirname}/../dist/mac/electron-webpack-react-typescript-quick-start.app/Contents/MacOS/electron-webpack-react-typescript-quick-start`
+      path: `${__dirname}/../dist/mac/electron-webpack-react-typescript-boilerplate.app/Contents/MacOS/electron-webpack-react-typescript-boilerplate`
     })
     return this.app.start()
   })
