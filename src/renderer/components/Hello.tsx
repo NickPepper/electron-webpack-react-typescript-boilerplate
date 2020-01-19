@@ -26,7 +26,7 @@ export class Hello extends React.Component<HelloProps, {}> {
 
   handleOpenWindowClick() {
     const window = new remote.BrowserWindow({ width: 300, height: 200, show: false })
-    window.loadFile(`${__dirname}/../../../../static/popup.html`)
+    window.loadFile('/Users/nikolaipershin/work/electron-webpack-react-typescript-boilerplate/src/static/popup.html')
     window.show()
   }
 }

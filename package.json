@@ -4,12 +4,11 @@
   "license": "MIT",
   "scripts": {
     "update": "rm -rf dist/ && rm -rf node_modules/ && rm -f yarn.lock && yarn cleanup && yarn",
-    "dev": "yarn copystatic && electron-webpack dev",
+    "dev": "electron-webpack dev",
     "compile": "electron-webpack",
-    "dist": "yarn cleanup && yarn copystatic && yarn compile && electron-builder",
+    "dist": "yarn cleanup && yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
     "test": "yarn dist && mocha",
-    "copystatic": "mkdir -p dist && rsync -av --progress ./static/ dist/static",
     "cleanup": "rm -rf dist/"
   },
   "husky": {
