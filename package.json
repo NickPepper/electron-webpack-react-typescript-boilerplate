@@ -31,7 +31,7 @@
     "@types/react-dom": "^16.9.4",
     "assert": "^2.0.0",
     "check-for-leaks": "^1.2.1",
-    "electron": "7.1.9",
+    "electron": "9.1.0",
     "electron-builder": "^22.2.0",
     "electron-mocha": "^8.2.0",
     "electron-webpack": "^2.7.4",
